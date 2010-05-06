@@ -136,3 +136,8 @@ This method simply finds the controller and executes the action method on the co
 
 Chester is built using coffee, because it is much easier to maintain, but you don't need to use coffeescript to use Chester, you can use JavaScript just fine.
 
+# Get Involved
+
+* Submit a pull request!
+* Report an issue on twitter.com/jackhq using #Ti.chester
+
