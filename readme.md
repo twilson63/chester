@@ -128,9 +128,9 @@ This will be the most confusing class, because the ui objects in titanium are us
 
 This is the main routing method that makes the whole application work.  It takes the following parameters as a JavaScript object.
 
-Controller: string,
-Action: string,
-Params: object
+* Controller: string,
+* Action: string,
+* Params: object
 
 This method simply finds the controller and executes the action method on the controller , passing the params object as the parameter.
 
