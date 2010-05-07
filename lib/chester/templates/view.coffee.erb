@@ -1,0 +1,7 @@
+class <%= name %><%= action.capitalize %> extends Chester.View
+  name: "<%= action %>"
+  render: ->
+    # TODO: add your presentation code here.
+
+  # Register view to Patients Controller
+Chester.Application.find("<%= name %>Controller").add(new <%= name %><%= action.capitalize %>())
