@@ -2,7 +2,7 @@ module Chester::Command
   class Brew < Base
     def index
       display "Start Brewing"
-      Dir.glob("#{File.pwd}/**/*.coffee").each do |f|
+      Dir.glob("#{FileUtils.pwd}/**/*.coffee").each do |f|
         system "coffee -c #{f}"
         display "Brewed #{f}..."
       end
