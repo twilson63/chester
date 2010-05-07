@@ -1,9 +1,8 @@
 module Chester::Command
   class Install < Base
     def index
-      display 'install chester.coffee in root'
-      display 'create app.coffee'
-      ChesterGenerators.run_cli(Dir.pwd, 'chester', '0.1', args)
+      FileUtils.cp File.dirname(__FILE__) + '/../templates/chester.coffee', FileUtils.pwd
+      display 'installed chester.coffee in to the working directory....'
     end
   end
 end

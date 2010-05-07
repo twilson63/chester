@@ -1,9 +1,12 @@
 module Chester::Command
   class Brew < Base
     def index
-      display 'find all coffee files'
-      display 'and compile'
-
+      display "Start Brewing"
+      Dir.glob("#{File.pwd}/**/*.coffee").each do |f|
+        system "coffee -c #{f}"
+        display "Brewed #{f}..."
+      end
+      display "Finished Brewing...."
     end
   end
 end

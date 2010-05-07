@@ -1,4 +1,5 @@
-require 'chester_generators'
+require 'fileutils'
+require 'erubis'
 
 module Chester; end
 
