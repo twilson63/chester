@@ -42,7 +42,7 @@ chester brew
 </pre>
 
 
-# Easy to generate models|views|controllers
+# Easy to generate models | views | controllers
 
 <pre>
   <code>
@@ -104,7 +104,7 @@ Chester.Application.find("PeopleController").add(new PeopleIndex())
   </code>
 </pre> 
 
-# Include the framework|models|views|controllers in app.js
+# Include the framework | models | views | controllers in app.js
 
 <pre>
   <code>
