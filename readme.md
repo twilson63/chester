@@ -2,11 +2,11 @@
 
 A MVC framework for Titanium Developer.
 
-The purpose of this framework is to organize your Titanium Developer projects in a model-view-controller pattern.
+The purpose of this framework is to organize your Titanium Developer projects in a Model-View-Controller (MVC) pattern.
 
 # Why
 
-Titanium Developer is an awesome javascript sdk for building mobile applications, but there is no conventions on how to organize your code.  We build web applications using Ruby on Rails, and being able to organize our iPad applications using the same patterns will enable us to process and maintain our software projects more effectively.
+Titanium Developer is an awesome JavaScript SDK for building mobile applications, but there are no conventions on how to organize your code. We build web applications using Ruby on Rails, and being able to organize our iPad applications using the same patterns will enable us to process and maintain our software projects more effectively.
 
 # Requirements
 
@@ -34,13 +34,14 @@ chester install
 
 # Easy to compile the coffee files to javascript
 
+This command compiles your coffee script into JavaScript.
+
 <pre>
   <code>
 cd ./Resources
 chester brew
   </code>
 </pre>
-
 
 # Easy to generate models | views | controllers
 
@@ -68,8 +69,7 @@ Chester.Application.Models.add(new Person())
   </code>
 </pre>
 
-Just a quick run down on what is going on here, inorder for chester to know your model, you must have an attribute called name, which should act as a name that chester can understand, then the model needs to be registered to the application object so that chester can find your model when you request it.
-
+Just a quick run down on what is going on here: in order for chester to know your model, you MUST have an attribute called name. This attribute (name) will register the model to the application object. Chester will then be able to find your model whenever you request it.
 
 - controllers
   - people.coffee
@@ -85,7 +85,7 @@ Chester.Application.add(new PeopleController())
   </code>
 </pre>
 
-Same as the model the controller needs to have an attribute called name that is the actual name used for chester to recognize the controller.
+Just like with the model, the controller needs to have an attribute called name. That is the actual name used for Chester to recognize the controller.
 
 - views
   - people
@@ -127,35 +127,47 @@ Ti.include('views/peoples/index.js');
 
 # Framework
 
-The object hierarchy is very straight forward.  Chester has a base object that has a collection called children, and a add method that adds a object to the children array and a find method that locates and returns the object based on the name of the object.
+The object hierarchy is very straight forward. Chester has a base object which has an add method and a find method.
+
+- base object
+  - has a collection called children
+  
+- Methods:
+  - add : adds an object to the children array
+  - find : locates and returns the object based on the name attribute
 
 ## Base
 
-This is the core class definition that all other classes share.
+This is the core class definition that all other classes inherit.
 
 ## Application
 
-This objects children are controllers, with the add method you can add new controller to this object.  And with the find method you can locate the controller by the name of the controller.  There is another array of objects attached to this class.  They are called models, these are basic classes that can added to the Models array.
+This objects children are controllers. With the add method you can add new controllers to this object. With the find method you can locate the controller by the name of the controller.
+
+####Add and Find Example:
+- Chester.Application.find("PeopleController").add(new PeopleIndex())
+
+There is another array of objects attached to this class called models. These are basic classes that can added to the Models array.
 
 ## Controller
 
-This objects children are views, these are not the same as views in titanium, these are simple JavaScript classes that are used to contain the user interface code to manage your mobile application.
+This object's children are views. These are not the same as views in Titanium. These are simple JavaScript classes that are used to contain the user interface code to manage your mobile application.
 
 ## View
 
-This will be the most confusing class, because the ui objects in titanium are user views.  the Chester views are more like code containers that help isolate your user interface code from your business logic and domain logic.
+This will be the most confusing class because the UI objects in Titanium are user views. The Chester views are more like code containers that help isolate your user interface code from your business logic and domain logic.
 
 ## Application.run
 
-This is the main routing method that makes the whole application work.  It takes the following parameters as a JavaScript object.
+This is the main routing method that makes the whole application work. It takes the following parameters as a JavaScript object.
 
 * Controller: string,
 * Action: string,
 * Params: object
 
-This method simply finds the controller and executes the action method on the controller , passing the params object as the parameter.
+This method simply finds the controller and executes the action method on the controller, passing the params object as the parameter.
 
-Chester is built using coffee, because it is much easier to maintain, but you don't need to use coffeescript to use Chester, you can use JavaScript just fine.
+Chester is built using coffee because it is much easier to maintain. But, you don't need to use coffeescript to use Chester! You can use JavaScript just fine.
 
 # Get Involved
 
