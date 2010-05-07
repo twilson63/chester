@@ -27,7 +27,8 @@ Just run chester install, and it will create the chester.coffee file in your Res
  
 <pre>
   <code>
-chester install ./Resources
+cd ./Resources
+chester install
   </code>
 </pre>
 
@@ -102,6 +103,26 @@ Chester.Application.find("PeopleController").add(new PeopleIndex())
     
   </code>
 </pre> 
+
+# Include the framework|models|views|controllers in app.js
+
+<pre>
+  <code>
+var Chester = {};
+
+// Include MVC Framework
+Ti.include('chester.js');
+
+// Register Controllers
+Ti.include('controllers/people_controller.js');
+
+// Register Models
+Ti.include('models/person.js');
+
+// Register Views
+Ti.include('views/peoples/index.js');
+  </code>
+</pre>
 
 
 # Framework
