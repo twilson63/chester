@@ -1,5 +1,6 @@
 require 'fileutils'
 require 'erubis'
+require 'active_support'
 
 module Chester; end
 
