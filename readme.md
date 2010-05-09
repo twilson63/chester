@@ -19,8 +19,16 @@ Titanium Developer is an awesome JavaScript SDK for building mobile applications
   <code>
 gem install chester
   </code>
-</pre>  
+</pre>
 
+# Test
+
+<pre>
+  <code>
+rake spec
+  </code>
+</pre>
+  
 # Add to any Titanium Developer Project
 
 Just run chester install, and it will create the chester.coffee file in your Resources folder.
