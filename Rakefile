@@ -9,9 +9,10 @@ begin
     gem.description = %Q{This project use coffeescript and MVC to create an awesome framework for the Titanium system!}
     gem.email = "tom@jackhq.com"
     gem.homepage = "http://github.com/twilson63/chester"
-    gem.authors = ["Tom Wilson"]
+    gem.authors = ["Tom Wilson", "Andrew Kennedy", "Nick Bucciarelli" ]
     gem.add_development_dependency "rspec", ">= 1.2.9"
     gem.add_dependency "erubis", ">= 2.6.5"
+    gem.add_dependency "activesupport", ">= 2.3.5"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new

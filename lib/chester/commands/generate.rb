@@ -31,8 +31,8 @@ module Chester::Command
       if file_type == 'controller'
         result += "_#{args.first}.coffee"
       elsif file_type == 'view'
-        FileUtils.mkdir_p result + 's'
-        result += "s/#{action}.coffee"
+        FileUtils.mkdir_p result
+        result += "/#{action}.coffee"
       else
         result += ".coffee"
       end
