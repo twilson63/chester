@@ -8,6 +8,16 @@ The purpose of this framework is to organize your Titanium Developer projects in
 
 Titanium Developer is an awesome JavaScript SDK for building mobile applications, but there are no conventions on how to organize your code. We build web applications using Ruby on Rails, and being able to organize our iPad applications using the same patterns will enable us to process and maintain our software projects more effectively.
 
+## Update
+
+Added Helper generator, also changed the convention of the controller actions and model methods to start with an underscore.  This will allow us to use new and create without worrying about javascript conflicts.
+
+## TODO
+
+* Finish Generator Test Coverage
+* enhance brew command to create one javascript file
+* Add testing library.  Suggestions?
+
 # Requirements
 
 * node.js
@@ -59,6 +69,7 @@ cd ./Resources
 chester generate model person
 chester generate controller people
 chester generate view people index
+chester generate helper people
   </code>
 </pre>
 

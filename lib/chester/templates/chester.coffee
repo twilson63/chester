@@ -13,9 +13,9 @@ class Base
   
   
 class Application extends Base
-  version: "0.0.1"
+  version: "0.1.0"
   run: (options) ->
-    this.find(options.controller)[options.action ?= 'index'](options.params ?= {} )
+    this.find(options.controller)[options.action ?= '_index'](options.params ?= {} )
   
 
     
@@ -38,5 +38,7 @@ Chester.View = View;
 Chester.Controller = Controller;
 Chester.Application = new Application();
 Chester.Application.Models = new Base();
+Chester.Application.Helpers = new Base();
+
 
 

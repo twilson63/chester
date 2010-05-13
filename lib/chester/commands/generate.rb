@@ -4,8 +4,8 @@ module Chester::Command
   class Generate < Base
     def index
       if args.length < 2
-        display 'Please enter [controller|model|view] [name]'
-      elsif args.first =~ /^(controller|model|view)$/
+        display 'Please enter [controller|model|view|helper] [name]'
+      elsif args.first =~ /^(controller|model|view|helper)$/
         create_folder args.first + 's'
         name = args[1].capitalize
         action = args[2] || 'index'
@@ -33,6 +33,8 @@ module Chester::Command
       elsif file_type == 'view'
         FileUtils.mkdir_p result
         result += "/#{action}.coffee"
+      elsif file_type == 'helper'
+        result += "_#{args.first}.coffee"        
       else
         result += ".coffee"
       end
