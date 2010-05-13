@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{chester}
-  s.version = "0.1.2"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Tom Wilson", "Andrew Kennedy", "Nick Bucciarelli"]
-  s.date = %q{2010-05-09}
+  s.date = %q{2010-05-12}
   s.default_executable = %q{chester}
   s.description = %q{This project use coffeescript and MVC to create an awesome framework for the Titanium system!}
   s.email = %q{tom@jackhq.com}
@@ -34,14 +34,15 @@ Gem::Specification.new do |s|
      "lib/chester/helpers.rb",
      "lib/chester/templates/chester.coffee",
      "lib/chester/templates/controller.coffee.erb",
+     "lib/chester/templates/helper.coffee.erb",
      "lib/chester/templates/model.coffee.erb",
      "lib/chester/templates/view.coffee.erb",
      "readme.md",
-     "spec/chester_spec.rb",
-     "spec/spec.opts",
-     "spec/spec_helper.rb",
-     "views/patient/index.coffee",
-     "views/patient/new.coffee"
+     "spec/base.rb",
+     "spec/commands/brew_spec.rb",
+     "spec/commands/generate_spec.rb",
+     "spec/commands/install_spec.rb",
+     "spec/spec.opts"
   ]
   s.homepage = %q{http://github.com/twilson63/chester}
   s.rdoc_options = ["--charset=UTF-8"]
@@ -49,8 +50,10 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.5}
   s.summary = %q{MVC for Titanium Developer}
   s.test_files = [
-    "spec/chester_spec.rb",
-     "spec/spec_helper.rb"
+    "spec/base.rb",
+     "spec/commands/brew_spec.rb",
+     "spec/commands/generate_spec.rb",
+     "spec/commands/install_spec.rb"
   ]
 
   if s.respond_to? :specification_version then
