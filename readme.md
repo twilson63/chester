@@ -4,6 +4,32 @@ A MVC framework for Titanium Developer.
 
 The purpose of this framework is to organize your Titanium Developer projects in a Model-View-Controller (MVC) pattern.
 
+# Status
+
+Current Version: 0.3.0
+
+## API is locked
+
+From this point on we will not be changing the API to move to stability.  There were some changes between 0.2 and 0.3.  From this point on there will not be any more api changes, so if your app works with 0.3 it should work with all later versions.
+
+## Changes
+
+* Multiple App Support 
+
+Extended the Chester namespace from Base, this will enable the developer to add multiple applications to the Chester namespace and run routes between the apps.
+
+* Created an alias of '_' underscore for find, which will make the lines more readable.  ex:
+
+    Chester._('app').run(...)
+
+instead of 
+
+    Chester.find('app').run(...) 
+
+* Created a names array on the base class to make it easier to find children objects
+
+* Updated generators with new changes 
+
 # Why
 
 Titanium Developer is an awesome JavaScript SDK for building mobile applications, but there are no conventions on how to organize your code. We build web applications using Ruby on Rails, and being able to organize our iPad applications using the same patterns will enable us to process and maintain our software projects more effectively.
@@ -81,10 +107,9 @@ These generators will make the following objects:
 <pre>
   <code>
 class Person
-  name: 'Person'
   # Insert your code here
   
-Chester.Application.Models.add(new Person())
+Chester._('app').Models.add(new Person('Person'))
   </code>
 </pre>
 
@@ -96,10 +121,9 @@ Just a quick run down on what is going on here: in order for chester to know you
 <pre>
   <code>
 class PeopleController extends Chester.Controller
-  name: 'PeopleController'
 
 # Register Controller to application
-Chester.Application.add(new PeopleController()) 
+Chester._('app').add(new PeopleController('PeopleController')) 
 
   </code>
 </pre>
@@ -113,12 +137,11 @@ Just like with the model, the controller needs to have an attribute called name.
 <pre>
   <code>
 class PeopleIndex extends Chester.View
-  name: "index"
-  render: ->
+  render: (params) ->
     # TODO: add your presentation code here.
 
   # Register view to Patients Controller
-Chester.Application.find("PeopleController").add(new PeopleIndex())
+Chester._('app')._("PeopleController").add(new PeopleIndex("index"))
     
   </code>
 </pre> 
@@ -127,8 +150,6 @@ Chester.Application.find("PeopleController").add(new PeopleIndex())
 
 <pre>
   <code>
-var Chester = {};
-
 // Include MVC Framework
 Ti.include('chester.js');
 
@@ -143,6 +164,28 @@ Ti.include('views/peoples/index.js');
   </code>
 </pre>
 
+# Roadmap
+
+## 0.3.0
+
+* Simple Example and locked API
+
+## 0.4.0
+
+* Full Test Suite
+
+## 0.5.0
+
+* Complete Web Site Documentation
+
+## 0.6.0
+
+* Complete working JQuery Example
+* Complete working Titanium Example
+
+## 0.7.0
+
+* Add a plugin module
 
 # Framework
 

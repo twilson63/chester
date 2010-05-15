@@ -1,5 +1,4 @@
 class <%= name %>
-  name: '<%= name %>'
   _all: ->
     # Get All Records
   _find_by_id: (id) ->
@@ -9,4 +8,4 @@ class <%= name %>
     
   # Insert your code here
   
-Chester.Application.Models.add(new <%= name %>())
+Chester._('app').Models.add(new <%= name %>('<%= name %>'))
