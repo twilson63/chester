@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{chester}
-  s.version = "0.2.0"
+  s.version = "0.3.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Tom Wilson", "Andrew Kennedy", "Nick Bucciarelli"]
-  s.date = %q{2010-05-12}
+  s.date = %q{2010-05-15}
   s.default_executable = %q{chester}
   s.description = %q{This project use coffeescript and MVC to create an awesome framework for the Titanium system!}
   s.email = %q{tom@jackhq.com}

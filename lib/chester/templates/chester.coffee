@@ -20,6 +20,7 @@ class Base
      @find(name)
     
   add: (child) ->
+    child.parent: this
     @children[@children.length]: child
     @names[@names.length]: child.name
   
