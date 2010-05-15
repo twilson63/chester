@@ -44,3 +44,6 @@ Chester._('app').Models: new Base('Models')
 Chester._('app').Helpers: new Base('Helpers')
 
 
+root: exports ? this
+root.Chester: Chester
+
