@@ -6,7 +6,11 @@ The purpose of this framework is to organize your Titanium Developer projects in
 
 # Status
 
-Current Version: 0.3.0
+Current Version: 0.3.1
+
+## Fixed Bug
+
+Fixed issue with model generator and the name attribute
 
 ## API is locked
 
